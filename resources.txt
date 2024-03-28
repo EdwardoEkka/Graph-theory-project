@@ -1,6 +1,4 @@
-Obtaining data for a theoretical analysis of internet infrastructure can be 
-challenging due to the sensitivity and complexity of network data. However, there are 
-several sources and approaches you can consider:
+Resources:-
 
 1. Public Datasets:
    - Internet Topology Datasets: Explore publicly available datasets such as the 
