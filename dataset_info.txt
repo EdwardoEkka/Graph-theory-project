@@ -1,0 +1,31 @@
+Brief detailing of the components in the dataset:
+
+1. AS (Autonomous Systems):
+   - Autonomous Systems (AS) are collections of IP networks and routers under the control of one or more network operators.
+   - In the dataset, AS numbers are used to uniquely identify individual Autonomous Systems. AS numbers typically range from 
+   1 to a few million.
+   - Each AS is associated with a name or label, providing a human-readable identifier for the AS.
+
+2. Edge_ID:
+   - Edge_ID serves as a unique identifier for each edge or connection between Autonomous Systems.
+   - This identifier distinguishes one connection from another in the dataset.
+   - Edge_IDs are used to reference specific connections when analyzing or visualizing the network topology.
+
+3. Source_AS and Target_AS:
+   - Source_AS represents the AS number from which the connection originates.
+   - Target_AS represents the AS number to which the connection is directed.
+   - Together, Source_AS and Target_AS define the endpoints of each connection in the dataset.
+
+4. Link_Type:
+   - Link_Type specifies the type of connection or link between Autonomous Systems.
+   - Common link types include:
+     - Peering: Indicates a direct interconnection between two ASes, typically for the exchange of traffic 
+     between their networks without the exchange of money.
+     - Transit: Indicates a commercial relationship where one AS (the transit provider) provides network connectivity 
+     to another AS (the customer) in exchange for payment.
+     - Other possible link types might include "Customer", "Provider", "Private Peering", etc., depending on the specific 
+     context and granularity of the dataset.
+
+Overall, this dataset provides information about the connectivity between Autonomous Systems in a network, specifying the 
+source and target of each connection, along with the type of relationship between them. It serves as a valuable resource for 
+analyzing and understanding the structure and dynamics of internet routing and interconnection.
