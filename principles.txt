@@ -1,4 +1,4 @@
-Certainly! In this project, you will primarily utilize principles from graph theory, which includes:
+Principles:-
 
 1. Graph Representation:
    - Representing internet infrastructure as a graph, where nodes represent network devices (e.g., routers, servers) 
