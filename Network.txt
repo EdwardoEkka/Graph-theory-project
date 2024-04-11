@@ -1,0 +1,46 @@
+Routing Process Overview: If I am transmitting a data from a pc in India to a 
+
+1. Local Network:
+   - The data packet originates from your PC within your local network, such as your home Wi-Fi network or organizational 
+   intranet.
+
+2. Internet Service Provider:
+   - Upon leaving the local network, the data packet is transferred to your Internet Service Provider (ISP).
+   - ISP's network infrastructure, including routers, facilitates directing the data packet towards its intended destination.
+
+3. Regional Network:
+   - The data packet traverses various network infrastructures owned by different ISPs, both within India and potentially 
+   across other countries, based on available routing paths.
+
+4. Transcontinental Links:
+   - As the data packet progresses, it may cross over to other continents, typically through undersea cables or satellite 
+   links, as it proceeds towards the United States.
+
+5. US ISPs:
+   - Upon reaching the United States, the data packet enters the network infrastructure of American ISPs.
+   - Within the US network, the packet may navigate through multiple routers as it advances towards the final destination.
+
+6. Destination Network:
+   - The data packet eventually reaches the network of the ISP serving the destination PC in California.
+   - Within the destination network, the packet undergoes further routing until it is delivered to the destination PC.
+
+                    Local Network
+                         |
+                         V
+                      ISP Network
+                         |
+                         V
+                  Regional Networks
+                         |
+                         V
+                  Transcontinental Links
+                         |
+                         V
+                      US ISPs
+                         |
+                         V
+               Destination Network (California)
+                         |
+                         V
+                    Destination PC
+
