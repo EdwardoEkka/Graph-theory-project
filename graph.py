@@ -1,34 +1,17 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-
-# Create a graph object
-G = nx.Graph()
+import csv
 
 # Define nodes
-nodes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
-G.add_nodes_from(nodes)
+G = nx.Graph()
 
-# Define edges with weights
-edges = [
-    ('A', 'B', 5),
-    ('A', 'C', 8),
-    ('A', 'D', 6),
-    ('B', 'E', 4),
-    ('B', 'F', 7),
-    ('C', 'G', 9),
-    ('C', 'H', 3),
-    ('D', 'I', 5),
-    ('D', 'J', 10),
-    ('E', 'F', 2),
-    ('E', 'G', 6),
-    ('F', 'H', 8),
-    ('G', 'I', 4),
-    ('H', 'J', 7)
-]
-
-# Add edges to the graph
-for edge in edges:
-    G.add_edge(edge[0], edge[1], weight=edge[2])
+# Read edges, nodes, and weights from the CSV file
+with open('test.csv', 'r') as csvfile:
+    reader = csv.reader(csvfile)
+    next(reader)  # Skip the header row
+    for row in reader:
+        node1, node2, weight = row
+        G.add_edge(node1, node2, weight=int(weight))
 
 # Define positions for nodes
 pos = nx.spring_layout(G)
@@ -40,7 +23,7 @@ nx.draw_networkx_nodes(G, pos, node_size=500)
 nx.draw_networkx_edges(G, pos)
 
 # Draw edge labels
-edge_labels = {(edge[0], edge[1]): edge[2] for edge in edges}
+edge_labels = nx.get_edge_attributes(G, 'weight')  # Retrieve edge labels from the graph
 nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
 
 # Draw node labels
